@@ -1,4 +1,5 @@
-
+// https://medium.com/bb-tutorials-and-thoughts/building-an-react-app-with-azure-static-web-apps-service-4e3e23e9870c
+// https://github.com/bbachi/react-azure-static-web-app/blob/master/todo-app/src/services/TodoService.js
 export async function getNotes() {
     const response = await fetch(`${process.env.REACT_APP_API}/note`);
     return await response.json();
