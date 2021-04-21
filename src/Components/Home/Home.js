@@ -20,13 +20,13 @@ const Home = () => {
 
     const onUpdateItem = (note) => {
         amendNote(note.id, note)
-            .catch(err => console.log(err));
-        setTriggered(!triggered);
+            .catch(err => console.log(err))
+            .finally(() => setTriggered(!triggered));
     }
     const onDeleteItem = (id) => {
         deleteNote(id)
-            .catch(err => console.log(err));
-        setTriggered(!triggered);
+            .catch(err => console.log(err))
+            .finally(() => setTriggered(!triggered));
     }
 
     function onAddItem(item) {
@@ -35,14 +35,14 @@ const Home = () => {
                 console.log("created: ", n);
             })
             .catch(err => console.log(err))
-        setTriggered(!triggered);
+            .finally(() => setTriggered(!triggered));
     }
 
     return (
         <Container className="App">
             <Row>
                 <Col>
-                    <h1 style={{ margin: "20px 0" }}>CRUD Database</h1>
+                    <h1 style={{ margin: "20px 0" }}>Words Memorizer</h1>
                 </Col>
             </Row>
             <Row>

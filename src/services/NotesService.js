@@ -1,4 +1,4 @@
-//const api="http://mymongofunctions.azurewebsites.net/api/"
+//const api="http://mymongofunctions.azurewebsites.net/api"
 const api = "http://localhost:7071/api"
 
 export async function getNotes() {
@@ -19,7 +19,12 @@ export async function createNote(data) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     })
-    return await response.json();
+
+    if (response.status === 200) {
+        return await response.json();
+    } else {
+        return {};
+    }
 }
 
 export async function amendNote(id, data) {

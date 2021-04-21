@@ -12,6 +12,7 @@ const DataTable = (props) => {
                     <th>Word</th>
                     <th>Content</th>
                     <th>Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
