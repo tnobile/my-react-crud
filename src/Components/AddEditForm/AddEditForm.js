@@ -48,6 +48,7 @@ class AddEditForm extends React.Component {
                     <Input type="select" name="category" id="category" onChange={this.onChange} value={ !(this.state.category) ? '' : this.state.category}>
                         <option>Spanish</option>
                         <option>English</option>
+                        <option>Desarrollador</option>
                         <option></option>
                     </Input>
                 </FormGroup>
