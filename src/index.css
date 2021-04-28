@@ -4,12 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  background: black;
 }
 
-table {
-  margin: 0;
-  border: 1px solid lightblue;
+Table {
+  margin: 1px;
+  border: 2px solid yellowgreen;
   border-collapse: collapse;
   border-spacing: 0px;
 }
