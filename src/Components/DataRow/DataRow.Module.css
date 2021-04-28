@@ -1,0 +1,23 @@
+.nowrap {
+    white-space: nowrap;
+}
+
+.content {
+    white-space: nowrap;
+    text-align: left;
+    max-width: 400px;
+    background: lightgoldenrodyellow;
+    overflow: hidden;
+}
+
+td {
+    max-width: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+Button {
+    padding: 1px 10px !important;
+} 
+

@@ -1,15 +1,16 @@
 import { Button } from 'reactstrap'
 import ModalForm from '../ModalForm/ModalForm'
+import styles from './DataRow.Module.css'
 
 const DataRow = ({ row, onDeleteItem, onUpdateItem }) => {
     return (
         <tr>
             <td>{row.category}</td>
             <td>{row.word}</td>
-            <td style={{ "text-align": "left", width: "10px" }}>{row.content}</td>
-            <td >{row.status}</td>
+            <td className={[styles.nowrap, styles.content].join(' ')}>{row.content}</td>
+            <td>{row.status}</td>
             <td>
-                <div style={{ width: "110px" }}>
+                <div className={styles.nowrap}>
                     <ModalForm buttonLabel="Edit" item={row} onUpdateItem={onUpdateItem} />
                     {' '}
                     <Button color='danger' onClick={() => onDeleteItem(row.id)}>Delete</Button>

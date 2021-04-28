@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap'
 import AddEditForm from '../AddEditForm/AddEditForm'
+import styles from './ModalForm.Module.css'
 
 class ModalForm extends Component {
     constructor(props) {
@@ -42,7 +43,7 @@ class ModalForm extends Component {
         return (
             <div>
                 {button}
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={styles["my-modal"]}>
                     <ModalHeader toggle={this.toggle} close={closeBtn}>{title}</ModalHeader>
                     <ModalBody>
                         <AddEditForm

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import styles from './AddEditForm.Module.css'
 
 class AddEditForm extends React.Component {
     constructor(props) {
@@ -42,7 +43,7 @@ class AddEditForm extends React.Component {
 
     render() {
         return (
-            <Form onSubmit={this.props.item ? this.submitFormEdit : this.submitFormAdd}>
+            <Form className={styles.myform} onSubmit={this.props.item ? this.submitFormEdit : this.submitFormAdd}>
                 <FormGroup>
                     <Label for="category">Category</Label>
                     <Input type="select" name="category" id="category" onChange={this.onChange} value={ !(this.state.category) ? '' : this.state.category}>
@@ -59,7 +60,7 @@ class AddEditForm extends React.Component {
                 </FormGroup>
                 <FormGroup>
                     <Label for="content">Content</Label>
-                    <Input type="textarea" name="content" id="content" onChange={this.onChange} value={this.state.content === null ? '' : this.state.content} />
+                    <Input className={styles.content} type="textarea" name="content" id="content" onChange={this.onChange} value={this.state.content === null ? '' : this.state.content} />
                 </FormGroup>
                 <FormGroup>
                     <Label for="status">Status</Label>

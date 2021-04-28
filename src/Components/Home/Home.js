@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
         getNotes()
             .then(n => {
-                console.log("got :", n);
+                //console.log("got :", n);
                 setItems(n);
             })
             .catch(err => console.log(err))
@@ -39,10 +39,10 @@ const Home = () => {
     }
 
     return (
-        <Container className="App">
+        <Container fluid className="App">
             <Row>
                 <Col>
-                    <h1 style={{ margin: "20px 0" }}>Words Memorizer</h1>
+                    <h1 style={{ margin: "10px 0" }}>Words Reminder</h1>
                 </Col>
             </Row>
             <Row>
@@ -55,7 +55,7 @@ const Home = () => {
                     <CSVLink
                         filename={"db.csv"}
                         color="primary"
-                        style={{ float: "left", marginRight: "10px" }}
+                        style={{ float: "left", marginRight: "10px", padding:"1px" }}
                         className="btn btn-primary"
                         data={items}>
                         Download CSV
