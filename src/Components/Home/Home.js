@@ -42,7 +42,7 @@ const Home = ({ category }) => {
         <Container fluid className="App">
             <Row>
                 <Col>
-                    <h1 style={{ margin: "10px 0" }}>Words Reminder</h1>
+                    <h1 style={{ margin: "10px 0" }}>{category} Words Reminder</h1>
                 </Col>
             </Row>
             <Row>
