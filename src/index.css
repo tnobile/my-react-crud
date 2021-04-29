@@ -8,8 +8,9 @@ body {
 
 Table {
   margin: 1px;
+  padding: 1px;
   border: 2px solid yellowgreen;
   border-collapse: collapse;
   border-spacing: 0px;
+  overflow-x: hidden;
 }
-

@@ -9,6 +9,7 @@ function App() {
           <li><Link to="/">Spanish</Link></li>
           <li><Link to="/english">English</Link></li>
           <li><Link to="/desarrollador">Desarrollador</Link></li>
+          <li><Link to="/destino">Destino</Link></li>
           <li><Link to="/all">Rest</Link></li>
         </ul>
       </nav>
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/desarrollador">
             <Home category="Desarrollador" />
+          </Route>
+          <Route path="/destino">
+            <Home category="Destino" />
           </Route>
           <Route path="/all">
             <Home category="" />
