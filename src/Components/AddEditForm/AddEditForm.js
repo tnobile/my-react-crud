@@ -50,7 +50,7 @@ class AddEditForm extends React.Component {
                         <option>Spanish</option>
                         <option>English</option>
                         <option>Desarrollador</option>
-                        <option>Destinacinon</option>
+                        <option>Destino</option>
                         <option></option>
                     </Input>
                 </FormGroup>

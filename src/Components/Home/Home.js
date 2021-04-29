@@ -5,18 +5,18 @@ import DataTable from '../DataTable/DataTable'
 import { CSVLink } from "react-csv"
 import { getNotes, deleteNote, createNote, amendNote } from '../../services/NotesService'
 
-const Home = () => {
+const Home = ({ category }) => {
     const [items, setItems] = useState([]);
     const [triggered, setTriggered] = useState(false);
 
     useEffect(() => {
-        getNotes()
+        getNotes(category)
             .then(n => {
                 //console.log("got :", n);
                 setItems(n);
             })
-            .catch(err => console.log(err))
-    }, [triggered]);
+            .catch(err => console.log("getNotes", err))
+    }, [triggered, category]);
 
     const onUpdateItem = (note) => {
         amendNote(note.id, note)
@@ -55,7 +55,7 @@ const Home = () => {
                     <CSVLink
                         filename={"db.csv"}
                         color="primary"
-                        style={{ float: "left", marginRight: "10px", padding:"1px" }}
+                        style={{ float: "left", marginRight: "10px", padding: "1px" }}
                         className="btn btn-primary"
                         data={items}>
                         Download CSV

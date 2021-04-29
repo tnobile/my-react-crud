@@ -3,3 +3,38 @@
   left: 0;
   max-width: 100%;
 }
+
+.topnav {
+  overflow: hidden;
+  /* don't show scroll bar */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  border: 1px solid black;
+  margin: 1px;
+  background: rgb(75, 57, 25);
+  text-align: center;
+  text-decoration: none;
+  padding: 1px 4px;
+  font-size: 24px;
+  width: 24.5%;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: burlywood;
+}
+
+.topnav a:active {
+  background-color: #491b9e;
+  color: violet;
+}
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
